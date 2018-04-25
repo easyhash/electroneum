@@ -5,5 +5,5 @@ docker run --name ElectroneumDaemon --volume daemon:/daemon/data easyhash/electr
 
 # Wallet
 ```bash
-docker run --name ElectroneumWallet --volume wallet:/daemon/data --link ElectroneumDaemon:daemon easyhash/electroneum:latest /daemon/electroneum-wallet-rpc --daemon-address=http://daemon:18081 --wallet-file=/daemon/data/electroneum-1.wallet --rpc-bind-ip=0.0.0.0 --rpc-bind-port=18082 --confirm-external-bind --trusted-daemon --disable-rpc-login --password '<wallet password>' --log-level=0
+docker run --name ElectroneumWallet --volume wallet:/daemon/data --link ElectroneumDaemon:daemon easyhash/electroneum:latest /daemon/electroneum-wallet-rpc --daemon-address=http://daemon:18081 --wallet-file=/daemon/data/electroneum.wallet --rpc-bind-ip=0.0.0.0 --rpc-bind-port=18082 --confirm-external-bind --trusted-daemon --disable-rpc-login --password '<wallet password>' --log-level=0
 ```
